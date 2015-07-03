@@ -57,8 +57,10 @@ var match = function(path, routes){
 // handler
 var app = function(req, res){
     req.ROOT = __dirname;
+
     var pathname = url.parse(req.url).pathname;
     var path = pathname.split('?')[0] || '/';
+
     var stack = match(path, routes['all']);
     var mStack = match(path, routes[req.method.toLowerCase()]);
     stack = stack.concat(mStack);

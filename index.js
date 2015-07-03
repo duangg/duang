@@ -1,6 +1,6 @@
 var http = require('http');
 var middle = require('./framework/middle/index.js');
-var app = require('./app.js');
+var app = require('./framework/app.js');
 var cfg = require('./config.json');
 
 app.use(middle.path);
